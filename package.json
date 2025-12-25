@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "source": "src/index.html",
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build",
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url /robots-duel-app/",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
