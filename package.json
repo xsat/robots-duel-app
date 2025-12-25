@@ -1,22 +1,22 @@
 {
-  "name": "robots-duel-app",
-  "homepage": "https://xsat.github.io/robots-duel-app/",
-  "version": "1.0.0",
-  "source": "src/index.html",
-  "scripts": {
-    "start": "parcel src/index.html",
-    "build": "parcel build src/index.html --public-url /robots-duel-app/",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
-  },
-  "dependencies": {
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
-  },
-  "devDependencies": {
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
-    "gh-pages": "^6.3.0",
-    "parcel": "^2.14.0"
-  }
+    "name": "robots-duel-app",
+    "homepage": "https://xsat.github.io/robots-duel-app/",
+    "version": "1.0.0",
+    "source": "src/index.html",
+    "scripts": {
+        "start": "parcel src/index.html",
+        "build": "parcel build src/index.html --public-url /robots-duel-app/",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d dist"
+    },
+    "dependencies": {
+        "react": "^19.1.0",
+        "react-dom": "^19.1.0"
+    },
+    "devDependencies": {
+        "@types/react": "^19.0.0",
+        "@types/react-dom": "^19.0.0",
+        "gh-pages": "^6.3.0",
+        "parcel": "^2.14.0"
+    }
 }
