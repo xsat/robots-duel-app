@@ -1,9 +1,9 @@
 import './App.css';
 
+import Game from './game';
+
 export function App() {
-  return (
-    <>
-      <h1>Robots Duel</h1>
-    </>
-  );
+    return (
+        <Game />
+    );
 }
