@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Robots Duel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="app" class="container">
+        <div class="row">
+            <div class="col-sm-2 mt-3">
+                <div class="input-group">
+                    <div class="input-group-text">Color</div>
+                    <select name="color" class="form-select" aria-label="Color">
+                        <option>Blue</option>
+                        <option>Red</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-4 mt-3">
+                <div class="input-group">
+                    <div class="input-group-text">My ID</div>
+                    <input name="player" disabled type="text" class="form-control" />
+                </div>
+            </div>
+            <div class="col-sm-4 mt-3">
+                <div class="input-group">
+                    <div class="input-group-text">Enemy ID</div>
+                    <input name="enemy" type="text" class="form-control" />
+                </div>
+            </div>
+            <div class="col-sm-2 mt-3">
+                <button type="button" class="btn btn-secondary form-control">Duel &#128640;</button>
+            </div>
+        </div>
+        <div class="row mt-3 fs-2 text-secondary">
+            <div class="col-5 text-secondary">
+                <span contenteditable="plaintext-only">Player 1</span>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-6">
+                <div class="progress">
+                    <div class="progress-bar bg-secondary" style="width: 100%">&nbsp;</div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-6">
+                <img class="rounded img-fluid" src="blue_robot_left.png">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
