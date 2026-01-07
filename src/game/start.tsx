@@ -1,14 +1,25 @@
+import { useState } from 'react';
 import { Button, Change, Editable, Image, Input, Progress, Select, Option } from "./components"
 
 import blueRobotLeft from "url:../assets/blue_robot_left.png";
+import redRobotLeft from "url:../assets/red_robot_left.png";
 
 export default function Start() {
+    const [image, setImage] = useState(blueRobotLeft);
+
     const colorOptions: Option[] = [
         { value: "blue", label: "Blue" },
         { value: "red", label: "Red" }
     ];
 
-    const onChangeColor: Change = (value: string) => { console.log(value) }
+    const onChangeColor: Change = (value: string) => { 
+        if (value == "blue") {
+            setImage(blueRobotLeft)
+        } else if (value == "red") {
+            setImage(redRobotLeft)
+        }
+    }
+
     const onChangeEnemyId: Change = (value: string) => { console.log(value) }
     const onChangePlayerName: Change = (value: string) => { console.log(value) }
 
@@ -40,7 +51,7 @@ export default function Start() {
             </div>
             <div className="row mt-3">
                 <div className="col-6">
-                    <Image source={blueRobotLeft} />
+                    <Image source={image} />
                 </div>
             </div>
         </>
