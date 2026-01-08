@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Change } from './change';
 
-export function Input({ name, label, value, onChange, isDisabled = false }:
-    { name: string; label: string; value: string; onChange: Change; isDisabled?: boolean }) {
+export function Input({ name, label, value, onChange }:
+    { name: string; label: string; value: string; onChange: Change; }) {
     const [inputValue, setInputValue] = useState(value);
 
     return (
@@ -14,10 +14,8 @@ export function Input({ name, label, value, onChange, isDisabled = false }:
                 type="text"
                 value={inputValue}
                 className="form-control"
-                disabled={isDisabled}
                 onChange={(event: any) => {
                     setInputValue(event.target.value);
-
                     onChange(event.target.value)
                 }} />
         </div>

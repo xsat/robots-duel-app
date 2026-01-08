@@ -1,10 +1,21 @@
-import { useState } from 'react';
-import { Button, Change, Editable, Image, Input, Progress, Select, Option } from "./components"
+import { useState, useRef } from 'react';
+import { Button, Change, DisabledInput, Editable, Image, Input, Progress, Select, Option } from "./components"
+import { DataConnection, Peer } from "peerjs";
 
 import blueRobotLeft from "url:../assets/blue_robot_left.png";
 import redRobotLeft from "url:../assets/red_robot_left.png";
 
 export default function Start() {
+    console.log("Start");
+
+    const peer = useRef(new Peer());
+    const [myId, setMyId] = useState("Loading...");
+    peer.current.on('open', (id: string) => {
+        console.log(id)
+
+        setMyId(id)
+    });
+
     const [image, setImage] = useState(blueRobotLeft);
 
     const colorOptions: Option[] = [
@@ -12,7 +23,7 @@ export default function Start() {
         { value: "red", label: "Red" }
     ];
 
-    const onChangeColor: Change = (value: string) => { 
+    const onChangeColor: Change = (value: string) => {
         if (value == "blue") {
             setImage(blueRobotLeft)
         } else if (value == "red") {
@@ -30,7 +41,7 @@ export default function Start() {
                     <Select name="color" label="Color" value="blue" options={colorOptions} onChange={onChangeColor} />
                 </div>
                 <div className="col-sm-4 mt-3">
-                    <Input name="my_id" label="My ID" value="" onChange={() => { console.log(1) }} isDisabled={true} />
+                    <DisabledInput name="my_id" label="My ID" value={myId} />
                 </div>
                 <div className="col-sm-4 mt-3">
                     <Input name="enemy_id" label="Enemy ID" value="" onChange={onChangeEnemyId} />
