@@ -1,5 +1,7 @@
+import { JSX } from "react";
+
 export function DisabledInput({ name, label, value }:
-    { name: string; label: string; value: string; }) {
+    { name: string; label: string; value: string; }): JSX.Element {
 
     return (
         <div className="input-group">

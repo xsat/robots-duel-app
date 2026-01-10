@@ -1,11 +1,11 @@
-import { useState, useRef } from 'react';
+import { JSX, useState, useRef } from 'react';
 import { Button, Change, DisabledInput, Editable, Image, Input, Progress, Select, Option } from "./components"
 import { DataConnection, Peer } from "peerjs";
 
 import blueRobotLeft from "url:../assets/blue_robot_left.png";
 import redRobotLeft from "url:../assets/red_robot_left.png";
 
-export default function Start() {
+export default function Start(): JSX.Element {
     const [myId, setMyId] = useState("Loading...");
     const peer = useRef(new Peer());
     peer.current.on('open', (id: string) => { setMyId(id) });

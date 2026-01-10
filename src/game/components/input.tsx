@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { JSX, useState } from 'react';
 import { Change } from './change';
 
 export function Input({ name, label, value, onChange }:
-    { name: string; label: string; value: string; onChange: Change; }) {
+    { name: string; label: string; value: string; onChange: Change; }): JSX.Element {
     const [inputValue, setInputValue] = useState(value);
 
     return (
