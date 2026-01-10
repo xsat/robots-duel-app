@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import { JSX, useState } from 'react';
 import { Change } from './change';
 
 export interface Option { value: string; label: string; }
 
 export function Select({ name, label, value, options, onChange }:
-    { name: string; label: string; value: string; options: Option[]; onChange: Change }) {
+    { name: string; label: string; value: string; options: Option[]; onChange: Change }): JSX.Element {
     const [selectValue, setSelectValue] = useState(value);
 
     return (
