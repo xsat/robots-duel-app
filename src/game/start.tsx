@@ -6,15 +6,9 @@ import blueRobotLeft from "url:../assets/blue_robot_left.png";
 import redRobotLeft from "url:../assets/red_robot_left.png";
 
 export default function Start() {
-    console.log("Start");
-
-    const peer = useRef(new Peer());
     const [myId, setMyId] = useState("Loading...");
-    peer.current.on('open', (id: string) => {
-        console.log(id)
-
-        setMyId(id)
-    });
+    const peer = useRef(new Peer());
+    peer.current.on('open', (id: string) => { setMyId(id) });
 
     const [image, setImage] = useState(blueRobotLeft);
 
